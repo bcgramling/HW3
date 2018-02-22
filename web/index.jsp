@@ -18,7 +18,7 @@
                             <td><input type="text" name="hoursWorked" value="" size="auto"></td> 
                         </tr>
                         <tr>
-                            <td>Hourly Pay:</td>
+                            <td>Hourly Pay Rate:</td>
                             <td><input type="text" name="payRate" value="" size="atuo"></td> 
                         </tr>
                         <tr>

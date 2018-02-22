@@ -6,6 +6,20 @@
         <link rel="stylesheet" type="text/css" href="./css/salaryStyle.css"/>
         <title>Salary Calculator</title>
     </head>
+    
+    <%
+        int hoursWorked = Integer.parseInt(request.getParameter("hoursWorked"));
+        int payRate = Integer.parseInt(request.getParameter ("payRate"));
+        int pretaxDeduct = Integer.parseInt(request.getParameter ("pretaxDeduct"));
+        int posttaxDeduct = Integer.parseInt(request.getParameter ("posttaxDeduct"));
+        
+        
+        
+        
+        
+        %>
+    
+    
     <body>
         <div id="calculator">
             <h1>Salary Information</h1>
@@ -14,11 +28,11 @@
                 <tbody>
                     <tr>
                         <td>Total Hours Worked:</td>
-                        <td></td>
+                        <td><%= hoursWorked %></td>
                     </tr>
                     <tr>
                         <td>Hourly Rate:</td>
-                        <td></td>
+                        <td><%= payRate %></td>
                     </tr>
                     <tr>
                         <td>Overtime Hours:</td>
