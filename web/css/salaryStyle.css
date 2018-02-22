@@ -1,0 +1,20 @@
+body{
+    background-color:lightblue;
+    text-align: left;
+}
+
+#calculator{
+    width:35%;
+    margin-right:auto;
+    margin-left:auto;
+    background-color: white;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:1px;
+    padding-bottom: 50px;
+    border: 1px solid black;
+    
+}
+
+
+
