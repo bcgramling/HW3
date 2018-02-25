@@ -15,11 +15,11 @@
                     <tbody>
                         <tr>
                             <td>Hours Worked:</td>
-                            <td><input type="text" name="hoursWorked" value="" size="auto"></td> 
+                            <td><input type="text" name="hoursWorked" value="" size="auto" required></td> 
                         </tr>
                         <tr>
                             <td>Hourly Pay Rate:</td>
-                            <td><input type="text" name="payRate" value="" size="atuo"></td> 
+                            <td><input type="text" name="hourlyRate" value="" size="atuo" required></td> 
                         </tr>
                         <tr>
                             <td>Pre-tax Deductions:</td>
@@ -32,7 +32,7 @@
                     </tbody>
                 </table>
                 <input type="reset" value="clear" id="clear">
-                <input type="submit" value="calculate" id="submit"
+                <input type="submit" value="calculate" id="submit">
                
             </form>
         </div>
