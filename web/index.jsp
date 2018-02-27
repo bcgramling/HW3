@@ -29,10 +29,14 @@
                             <td>Post-tax Deductions:</td>
                             <td><input type="text" name="posttaxDeduct" value="" size="auto"></td> 
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="reset" value="clear" id="clear">
+                                <input type="submit" value="calculate" id="submit"
+                            </td> 
+                        </tr>
                     </tbody>
                 </table>
-                <input type="reset" value="clear" id="clear">
-                <input type="submit" value="calculate" id="submit">
                
             </form>
         </div>

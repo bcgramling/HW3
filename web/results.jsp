@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.text.DecimalFormat" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,7 @@
     </head>
     
     <%
+       
         // Variables
         double OTHours = 0, OTPay = 0, regPay = 0, grossPay = 0,pretaxDeduct = 0, pretaxPay = 0, 
                 taxAmt= 0, posttaxPay= 0, posttaxDeduct = 0, netPay = 0;
@@ -62,84 +64,94 @@
         <div id="calculator">
             <h1>Salary Information</h1>
             <hr><br>
-            <table>
+            <table border="1">
                 <tbody>
                     <tr>
-                        <td>Total Hours Worked:</td>
+                        <td colspan="2">Total Hours Worked:</td>
                         <td>&nbsp;&nbsp;&nbsp;<%= hoursWorked %> Hours</td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
-                    </tr>
+                        <td colspan="3">&nbsp; </td>
+                    </tr> 
                     <tr>
-                        <td>Hourly Rate:</td>
+                        <td colspan="2">Hourly Rate:</td>
                         <td>&nbsp;&nbsp;&nbsp;$<%= payRate %>/hour</td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                        <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Overtime Hours:</td>
+                        <td colspan="2">Overtime Hours:</td>
                         <td>&nbsp;&nbsp;&nbsp;<%= OTHours %> Hours</td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Overtime Hourly Rate:</td>
+                        <td colspan="2">Overtime Hourly Rate:</td>
                         <td>&nbsp;&nbsp;&nbsp;$<%= OTRate %>/hour</td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Gross Pay:</td>
-                        <td>&nbsp;&nbsp;&nbsp;$<%= grossPay %></td>
+                        <td colspan="2">Gross Pay:</td>
+                        <td style="font-weight:bold">&nbsp;&nbsp;&nbsp;$<%= grossPay %></td>
+                    </tr> 
+                    <tr>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>Pre-tax Deductions:</td>
+                        <td colspan="2">Pre-tax Deductions:</td>
                         <td>&nbsp;&nbsp;&nbsp;$<%= pretaxDeduct %></td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                        <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Pre-tax Pay:</td>
-                        <td>&nbsp;&nbsp;&nbsp;$<%= pretaxPay %></td>
+                        <td colspan="2">Pre-tax Pay:</td>
+                        <td style="font-weight:bold">&nbsp;&nbsp;&nbsp;$<%= pretaxPay %></td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                        <td colspan="3">&nbsp; </td>    
                     </tr>
                     <tr>
-                        <td>Tax Amount:</td>
+                        <td colspan="2">Tax Amount:</td>
                         <td>&nbsp;&nbsp;&nbsp;$<%= taxAmt %></td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Post-tax Pay:</td>
-                        <td>&nbsp;&nbsp;&nbsp;$<%= posttaxPay %></td>
+                        <td colspan="2">Post-tax Pay:</td>
+                        <td style="font-weight:bold">&nbsp;&nbsp;&nbsp;$<%= posttaxPay %></td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Post-tax Deductions:</td>
+                        <td colspan="2">Post-tax Deductions:</td>
                         <td>&nbsp;&nbsp;&nbsp;$<%= posttaxDeduct %> </td>
                     </tr>
                     <tr>
-                           <td>&nbsp;</td><td>&nbsp;</td>
+                           <td colspan="3">&nbsp; </td>
                     </tr>
                     <tr>
-                        <td>Net Pay:</td>
-                        <td>&nbsp;&nbsp;&nbsp;$<%= netPay %></td>
+                        <td colspan="2">Net Pay:</td>
+                        <td style="font-weight:bold">&nbsp;&nbsp;&nbsp;$<%= netPay %></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">&nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td width="200"> </td>
+                        <td><form name="salaryCalc" action="index.jsp" method="post">
+                               <input type="submit" value="New Calculation" id="submit"> 
+                        </td>
+                        <td width="200"> </td>
                     </tr>
                 </tbody>
-            </table>  
+            </table>
         </div>
     </body>
 </html>
