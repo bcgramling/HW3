@@ -46,16 +46,18 @@
         grossPay = regPay + OTPay; 
     }
     
+    pretaxPay = grossPay - pretaxDeduct;
+    
     if (grossPay >= 500)
     {
-        taxAmt = grossPay * .22;
+        taxAmt = pretaxPay * .22;
     }
     else 
     {
-        taxAmt = grossPay * .18;
+        taxAmt = pretaxPay * .18;
     }
     
-        pretaxPay = grossPay - pretaxDeduct;
+        
         posttaxPay = pretaxPay - taxAmt;
         netPay = posttaxPay - posttaxDeduct;
     %>
